@@ -1,0 +1,216 @@
+
+# Program Motor
+def Motor():
+    print('='.center(20,'='))
+    print('Pilih Motor')
+    print('='.center(20,'='))
+    pil = ['Suzuki','Yamaha','Honda','Mio']
+    motor = ['1. Suzuki = 100000', '2. Yamaha = 150000', '3. Honda  = 200000', '4. MIO    = 300000']
+    harga = [100000, 150000, 200000, 300000]
+    
+    for i in motor:
+        print(i)
+    
+    print('='.center(20,'='))
+    
+    masukan = eval(input("Masukan Pilihan : "))
+    
+    
+    jumlah = eval(input("Jumlah motor yang ingin di beli : "))
+    
+    print('='.center(20,'='))
+    
+    if masukan == 1:
+        Total = harga[0]*jumlah
+        print("Anda Membeli : ", pil[0], "\nJumlah Pembelian : ", jumlah, "\nTotal Harga : ", Total )
+    
+    elif masukan == 2:
+        Total = harga[1]*jumlah
+        print("Anda Membeli : ", pil[1], "\nJumlah Pembelian : ", jumlah, "\nTotal Harga : ", Total )
+    
+    elif masukan == 3:
+        Total = harga[2]*jumlah
+        print("Anda Membeli : ", pil[2], "\nJumlah Pembelian : ", jumlah, "\nTotal Harga : ", Total )
+        
+    elif masukan == 4:
+        Total = harga[3]*jumlah
+        print("Anda Membeli : ", pil[3], "\nJumlah Pembelian : ", jumlah, "\nTotal Harga : ", Total )
+    else:
+        print("Error")
+        
+    print('='*50)
+    print("1,2,3,4,6,7,8,9")
+    print("Temukan angka yang hilang untuk mendapatkan Discount")
+
+    print('='*50)
+  
+    try:
+        a = int(input("Masukkan angka: "))
+        if a != 5:
+            raise ValueError("Maaf anda gagal", "Total Belanja anda : ", Total)
+        elif a==5:
+            raise ValueError("Potongan Harga :", ((30/100)*Total))
+    except ValueError as ve:
+            print(ve)
+
+    print("\n")
+    print('PEMBAYARAN'.center(50,'='))
+    uang = eval(input("Uang Tunai : "))
+
+    if (a == 5) :
+      diskon = (30/100)*Total
+      total = Total - ((30/100)*Total)
+      kembalian = uang - total
+      if (uang < total):
+        print("Uang kurang, masukkan nominal uang kembali ")
+
+        print('='.center(20,'='))
+
+        tambah =eval(input("Uang Tunai : "))
+        kembali = tambah - total
+        print("Total Tagihan : Rp.", Total,"\nDiscount : Rp.",diskon,"\nSetelah Discount : Rp.",total,"\nKembalian : ",kembali)
+      else :
+        print("Total Tagihan : Rp.", Total,"\nDiscount : Rp.",diskon,"\nSetelah Discount : Rp.",total,"\nKembalian : ",kembalian)
+    else :
+      kemblian = uang - Total
+      if (uang < Total) :
+        print("Uang kurang, masukkan nominal uang kembali ")
+
+        print('='.center(20,'='))
+
+        tambah =eval(input("Uang Tunai : "))
+        kembali = tambah - Total
+        print("Total Tagihan : ", Total,"\nDiscount : Rp.0","\nKembalian: ",kembali)
+      else :
+        print("Total Tagihan : ", Total,"\nDiscount : Rp.0","\nKembalian: ",kemblian)
+    
+    print('='*20)
+    b = input("Apakah anda ingin membeli Motor lagi?(y/n) : ")
+    if b == 'y':
+        Mobil()
+    elif b== 'n':
+        Menu()
+    else:
+        print("Coba Lagi")
+
+
+# Program Mobil
+def Mobil():
+    print('='.center(20,'='))
+    print('Pilih Mobil')
+    print('='.center(20,'='))
+    
+    pil = ['Avanza','Toyota','Suzuki','BMW']
+    mobil = ['1. Avanza = 100000', '2. Toyota = 150000', '3. Suzuki = 200000', '4. BMW    = 300000']
+    harga = [100000, 150000, 200000, 300000]
+    
+    
+    for i in mobil:
+        print(i)
+    
+    print('='.center(20,'='))
+    
+    masukan = eval(input("Masukan Pilihan : "))
+    
+    # print('='.center(20,'='))
+    
+    jumlah = eval(input("Jumlah mobil yang ingin di beli : "))
+    
+    print('='.center(20,'='))
+    
+    if masukan == 1:
+        Total = harga[0]*jumlah
+        print("Anda Membeli : ", pil[0], "\nJumlah Pembelian : ", jumlah, "\nTotal Harga : ", Total )
+    
+    elif masukan == 2:
+        Total = harga[1]*jumlah
+        print("Anda Membeli : ", pil[1], "\nJumlah Pembelian : ", jumlah, "\nTotal Harga : ", Total )
+    
+    elif masukan == 3:
+        Total = harga[2]*jumlah
+        print("Anda Membeli : ", pil[2], "\nJumlah Pembelian : ", jumlah, "\nTotal Harga : ", Total )
+        
+    elif masukan == 4:
+        Total = harga[3]*jumlah
+        print("Anda Membeli : ", pil[3], "\nJumlah Pembelian : ", jumlah, "\nTotal Harga : ", Total )
+    else:
+        print("Error")
+        
+    print('='*50)
+    print("1,2,3,4,6,7,8,9")
+    print("Temukan angka yang hilang untuk mendapatkan Discount")
+    print('='*50)
+    
+    try:
+        a = int(input("Masukkan angka: "))
+        if a != 5:
+            raise ValueError("Maaf anda gagal", "Total Belanja anda : ", Total)
+        elif a==5:
+            raise ValueError("Potongan Harga : ", (30/100)*Total)
+    except ValueError as ve:
+            print(ve)
+    
+    print("\n")
+    print('PEMBAYARAN'.center(50,'='))
+    uang = eval(input("Uang Tunai : "))
+
+    if (a == 5) :
+      diskon = (30/100)*Total
+      total = Total - ((30/100)*Total)
+      kembalian = uang - total
+      if (uang < total):
+        print("Uang kurang, masukkan nominal uang kembali ")
+
+        print('='.center(20,'='))
+
+        tambah =eval(input("Uang Tunai : "))
+        kembali = tambah - total
+        print("Total Tagihan : Rp.", Total,"\nDiscount : Rp.",diskon,"\nSetelah Discount : Rp.",total,"\nKembalian : ",kembali)
+      else :
+        print("Total Tagihan : Rp.", Total,"\nDiscount : Rp.",diskon,"\nSetelah Discount : Rp.",total,"\nKembalian : ",kembalian)
+    else :
+      kemblian = uang - Total
+      if (uang < Total) :
+        print("Uang kurang, masukkan nominal uang kembali ")
+
+        print('='.center(20,'='))
+
+        tambah =eval(input("Uang Tunai : "))
+        kembali = tambah - Total
+        print("Total Tagihan : ", Total,"\nDiscount : Rp.0","\nKembalian: ",kembali)
+      else :
+        print("Total Tagihan : ", Total,"\nDiscount : Rp.0","\nKembalian: ",kemblian)
+    
+    print('='*20)
+    b = input("Apakah anda ingin membeli Mobil lagi?(y/n) : ")
+    if b == 'y':
+        Mobil()
+    elif b== 'n':
+        Menu()
+    else:
+        print("Coba Lagi")
+
+
+def Menu():
+    print('='.center(50,'='))
+    s = 'Selamat Datang di Aplikasi Membeli Mobil Atau Motor'
+    print(s)
+    print('='.center(50,'='))
+    
+    print("Pilih Program")
+    pilih = ['1. Membeli Mobil', '2. Membeli Motor', '3. Exit Program']
+    
+    for i in pilih:
+        print(i)
+    
+    pilihan = eval(input("Masukan Pilihan : "))
+    
+    if pilihan == 1:
+        Mobil()
+    elif pilihan == 2:
+        Motor()
+    else :
+        print("Program Exit")
+        exit()
+
+Menu()
