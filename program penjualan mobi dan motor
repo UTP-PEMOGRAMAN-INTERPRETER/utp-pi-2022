@@ -1,3 +1,9 @@
+import datetime
+
+def  date () :
+    tanggal = datetime.datetime.now()
+    tggl = jam.strftime("%A / %x")
+    print("\t\t\t\t",tggl)
 
 # Program Motor
 def Motor():
@@ -55,6 +61,9 @@ def Motor():
 
     print("\n")
     print('PEMBAYARAN'.center(50,'='))
+    date ()
+    print('='*50)
+
     uang = eval(input("Uang Tunai : "))
 
     if (a == 5) :
@@ -152,6 +161,10 @@ def Mobil():
     
     print("\n")
     print('PEMBAYARAN'.center(50,'='))
+    date ()
+    print('='*50)
+    
+
     uang = eval(input("Uang Tunai : "))
 
     if (a == 5) :
@@ -196,6 +209,7 @@ def Menu():
     s = 'Selamat Datang di Aplikasi Membeli Mobil Atau Motor'
     print(s)
     print('='.center(50,'='))
+    print('='*50)
     
     print("Pilih Program")
     pilih = ['1. Membeli Mobil', '2. Membeli Motor', '3. Exit Program']
